@@ -22,7 +22,7 @@ def update_data():
             for row in readerAPI:
                 capitalCity = row[1]
                 url = (f'https://api.openweathermap.org/data/2.5/weather?q={capitalCity}&limit=1'
-                       f'&appid=6681af215dc7936e8fdb9e2ee497f649')
+                       f'&appid=') #do appid potřeba dát openweatherapp API klíč
                 response = requests.get(url)
 
                 if response.status_code == 200:
